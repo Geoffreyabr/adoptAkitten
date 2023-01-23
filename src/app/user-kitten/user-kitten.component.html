@@ -1,0 +1,18 @@
+<div class="user">
+<app-list-kitten (sendSelectedCat)="receiveCat($event)" ></app-list-kitten>
+
+ <div class="user2">
+  Ma collection de chats
+  <ul *ngFor="let fav of favoriteCat">
+    <li>
+          <img [src]="fav.img">
+    </li>
+  </ul>  
+ </div>
+</div>
+
+
+
+
+
+

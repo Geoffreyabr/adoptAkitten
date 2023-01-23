@@ -1,0 +1,16 @@
+<div class="list">
+<app-create-kitten (sendCattoList)="receiveCat($event)"></app-create-kitten>
+
+
+  <div class="list2">
+    <h2>La liste de chats a adopter</h2>
+  <ul *ngFor="let cat of catList">
+    <p *ngIf="cat.survol">{{ cat.name }} {{ cat.race }} {{ cat.date }}</p>
+    <li>
+      <img [src]="cat.img" (mouseover)="playP(cat)" (mouseleave)="playP(cat)"/><button (click)="selectCat(cat)">
+        Adoptez le
+      </button>
+    </li>
+  </ul>
+  </div>
+</div>
